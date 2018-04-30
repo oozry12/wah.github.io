@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://oo.oozry.com/"/>
-  <updated>2017-08-09T06:20:54.069Z</updated>
+  <updated>2017-08-13T15:32:30.732Z</updated>
   <id>https://oo.oozry.com/</id>
   
   <author>
@@ -17,14 +17,14 @@
   
   <entry>
     <title>hexo更新记录</title>
-    <link href="https://oo.oozry.com/08/hexo-modify.io"/>
-    <id>https://oo.oozry.com/08/hexo-modify.io</id>
+    <link href="https://oo.oozry.com/08/hexo-modify.html"/>
+    <id>https://oo.oozry.com/08/hexo-modify.html</id>
     <published>2017-08-09T05:53:37.828Z</published>
-    <updated>2017-08-09T06:20:54.069Z</updated>
+    <updated>2017-08-13T15:32:30.732Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;&lt;p&gt;仅以此文记录博客折腾过程 方便回滚检查&lt;/p&gt;&lt;/blockquote&gt;&lt;h3 id=&quot;换主题&quot;&gt;&lt;a href=&quot;#换主题&quot; class=&quot;headerlink&quot; title=&quot;换主题&quot;&gt;&lt;/a&gt;换主题&lt;/h3&gt;&lt;p&gt;感谢 @ &lt;a href=&quot;h
+      &lt;blockquote&gt;&lt;p&gt;仅以此文记录博客折腾过程 方便回滚检查&lt;/p&gt;&lt;/blockquote&gt;&lt;h3 id=&quot;换主题&quot;&gt;&lt;a href=&quot;#换主题&quot; class=&quot;headerlink&quot; title=&quot;换主题&quot;&gt;&lt;/a&gt;换主题&lt;/h3&gt;&lt;p&gt;2017-08-13 更新&lt;b
     
     </summary>
     
@@ -37,8 +37,8 @@
   
   <entry>
     <title>清风拂面</title>
-    <link href="https://oo.oozry.com/08/%E6%B8%85%E9%A3%8E%E6%8B%82%E9%9D%A2.io"/>
-    <id>https://oo.oozry.com/08/清风拂面.io</id>
+    <link href="https://oo.oozry.com/08/%E6%B8%85%E9%A3%8E%E6%8B%82%E9%9D%A2.html"/>
+    <id>https://oo.oozry.com/08/清风拂面.html</id>
     <published>2017-08-06T15:36:40.512Z</published>
     <updated>2017-08-07T04:11:26.158Z</updated>
     
@@ -57,8 +57,8 @@
   
   <entry>
     <title>天气好热啊</title>
-    <link href="https://oo.oozry.com/08/summer.io"/>
-    <id>https://oo.oozry.com/08/summer.io</id>
+    <link href="https://oo.oozry.com/08/summer.html"/>
+    <id>https://oo.oozry.com/08/summer.html</id>
     <published>2017-08-03T13:08:47.414Z</published>
     <updated>2017-08-03T13:08:47.445Z</updated>
     
@@ -77,10 +77,10 @@
   
   <entry>
     <title>Migrate to Hexo</title>
-    <link href="https://oo.oozry.com/07/new-hexo-blog.io"/>
-    <id>https://oo.oozry.com/07/new-hexo-blog.io</id>
-    <published>2017-07-31T15:20:43.410Z</published>
-    <updated>2017-07-31T15:20:43.411Z</updated>
+    <link href="https://oo.oozry.com/07/new-hexo-blog.html"/>
+    <id>https://oo.oozry.com/07/new-hexo-blog.html</id>
+    <published>2017-07-31T15:20:43.411Z</published>
+    <updated>2018-04-30T07:55:04.196Z</updated>
     
     <summary type="html">
     
@@ -93,10 +93,10 @@
   
   <entry>
     <title>make some rules</title>
-    <link href="https://oo.oozry.com/07/make-rule-for-life.io"/>
-    <id>https://oo.oozry.com/07/make-rule-for-life.io</id>
+    <link href="https://oo.oozry.com/07/make-rule-for-life.html"/>
+    <id>https://oo.oozry.com/07/make-rule-for-life.html</id>
     <published>2017-07-31T12:38:46.560Z</published>
-    <updated>2017-08-01T15:39:34.685Z</updated>
+    <updated>2017-08-01T15:39:34.686Z</updated>
     
     <summary type="html">
     
@@ -111,10 +111,10 @@
   
   <entry>
     <title>those days</title>
-    <link href="https://oo.oozry.com/07/old-day.io"/>
-    <id>https://oo.oozry.com/07/old-day.io</id>
-    <published>2017-07-31T11:59:13.377Z</published>
-    <updated>2017-08-10T03:47:14.161Z</updated>
+    <link href="https://oo.oozry.com/07/old-day.html"/>
+    <id>https://oo.oozry.com/07/old-day.html</id>
+    <published>2017-07-31T11:59:13.378Z</published>
+    <updated>2018-04-30T07:48:56.100Z</updated>
     
     <summary type="html">
     
@@ -129,10 +129,10 @@
   
   <entry>
     <title>Xposed for Android N</title>
-    <link href="https://oo.oozry.com/07/xposed-for-n.io"/>
-    <id>https://oo.oozry.com/07/xposed-for-n.io</id>
+    <link href="https://oo.oozry.com/07/xposed-for-n.html"/>
+    <id>https://oo.oozry.com/07/xposed-for-n.html</id>
     <published>2017-07-21T12:26:25.000Z</published>
-    <updated>2017-08-10T03:46:54.902Z</updated>
+    <updated>2017-08-10T03:46:54.903Z</updated>
     
     <summary type="html">
     
