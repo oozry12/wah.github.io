@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[温柔而坚定的声音]]></title>
+      <url>/05/git.html</url>
+      <content type="html"><![CDATA[<blockquote><p>忙碌的小日子</p></blockquote><h3 id="久违的声音"><a href="#久违的声音" class="headerlink" title="久违的声音"></a>久违的声音</h3><p>听了一场“金大哥”的演唱会<br>大七电台，菜鸟主播，哈哈哈。</p><h3 id="美味的水果"><a href="#美味的水果" class="headerlink" title="美味的水果"></a>美味的水果</h3>]]></content>
+      
+        
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[hexo更新记录]]></title>
       <url>/08/hexo-modify.html</url>
       <content type="html"><![CDATA[<blockquote><p>仅以此文记录博客折腾过程 方便回滚检查</p></blockquote><h3 id="回归disqus评论"><a href="#回归disqus评论" class="headerlink" title="回归disqus评论"></a>回归disqus评论</h3><p>2018-05-01更新<br>兜兜转转 伊人还在</p><h3 id="换主题"><a href="#换主题" class="headerlink" title="换主题"></a>换主题</h3><p>2017-08-13 更新<br>感谢 @ <a href="https://imys.net/" target="_blank" rel="external">Yusen</a> 的[indigo 主题] (<a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="external">https://github.com/yscoder/hexo-theme-indigo</a>)<br>比较简洁的MD风格</p><p>感谢 @ <a href="https://keyin.me/" target="_blank" rel="external">Kevin Tan</a><br>非常优秀的MD风格的博客UI</p><h3 id="增加评论系统"><a href="#增加评论系统" class="headerlink" title="增加评论系统"></a>增加评论系统</h3><p>感谢 @ <a href="https://github.com/gitalk" target="_blank" rel="external">gitalk</a><br>基于issues页面 超级方便移植入静态博客 友好化时间提醒<br>展望：加入@ 回复提醒。加入评论者来源平台 浏览器 etc</p><p>To be continued</p>]]></content>

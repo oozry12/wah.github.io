@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://oo.oozry.com/"/>
-  <updated>2018-05-01T05:43:55.175Z</updated>
+  <updated>2018-05-01T07:57:26.477Z</updated>
   <id>https://oo.oozry.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>温柔而坚定的声音</title>
+    <link href="https://oo.oozry.com/05/git.html"/>
+    <id>https://oo.oozry.com/05/git.html</id>
+    <published>2018-05-01T07:26:52.000Z</published>
+    <updated>2018-05-01T07:57:26.477Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;&lt;p&gt;忙碌的小日子&lt;/p&gt;&lt;/blockquote&gt;&lt;h3 id=&quot;久违的声音&quot;&gt;&lt;a href=&quot;#久违的声音&quot; class=&quot;headerlink&quot; title=&quot;久违的声音&quot;&gt;&lt;/a&gt;久违的声音&lt;/h3&gt;&lt;p&gt;听了一场“金大哥”的演唱会&lt;br&gt;大七电
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://oo.oozry.com/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo更新记录</title>
