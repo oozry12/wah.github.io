@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://oo.oozry.com/"/>
-  <updated>2018-05-01T07:57:26.477Z</updated>
+  <updated>2018-05-01T08:10:52.715Z</updated>
   <id>https://oo.oozry.com/</id>
   
   <author>
@@ -17,14 +17,14 @@
   
   <entry>
     <title>温柔而坚定的声音</title>
-    <link href="https://oo.oozry.com/05/git.html"/>
-    <id>https://oo.oozry.com/05/git.html</id>
+    <link href="https://oo.oozry.com/music-fruit.html"/>
+    <id>https://oo.oozry.com/music-fruit.html</id>
     <published>2018-05-01T07:26:52.000Z</published>
-    <updated>2018-05-01T07:57:26.477Z</updated>
+    <updated>2018-05-01T08:10:52.715Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;&lt;p&gt;忙碌的小日子&lt;/p&gt;&lt;/blockquote&gt;&lt;h3 id=&quot;久违的声音&quot;&gt;&lt;a href=&quot;#久违的声音&quot; class=&quot;headerlink&quot; title=&quot;久违的声音&quot;&gt;&lt;/a&gt;久违的声音&lt;/h3&gt;&lt;p&gt;听了一场“金大哥”的演唱会&lt;br&gt;大七电
+      &lt;blockquote&gt;&lt;p&gt;忙碌的小日子 需要点小幸福&lt;/p&gt;&lt;/blockquote&gt;&lt;h3 id=&quot;久违的声音&quot;&gt;&lt;a href=&quot;#久违的声音&quot; class=&quot;headerlink&quot; title=&quot;久违的声音&quot;&gt;&lt;/a&gt;久违的声音&lt;/h3&gt;&lt;p&gt;听了一场“金大哥”的演唱会
     
     </summary>
     
@@ -35,8 +35,8 @@
   
   <entry>
     <title>hexo更新记录</title>
-    <link href="https://oo.oozry.com/08/hexo-modify.html"/>
-    <id>https://oo.oozry.com/08/hexo-modify.html</id>
+    <link href="https://oo.oozry.com/hexo-modify.html"/>
+    <id>https://oo.oozry.com/hexo-modify.html</id>
     <published>2017-08-09T05:53:37.828Z</published>
     <updated>2018-05-01T05:43:55.175Z</updated>
     
@@ -55,8 +55,8 @@
   
   <entry>
     <title>清风拂面</title>
-    <link href="https://oo.oozry.com/08/%E6%B8%85%E9%A3%8E%E6%8B%82%E9%9D%A2.html"/>
-    <id>https://oo.oozry.com/08/清风拂面.html</id>
+    <link href="https://oo.oozry.com/%E6%B8%85%E9%A3%8E%E6%8B%82%E9%9D%A2.html"/>
+    <id>https://oo.oozry.com/清风拂面.html</id>
     <published>2017-08-06T15:36:40.512Z</published>
     <updated>2018-04-30T17:02:23.508Z</updated>
     
@@ -75,8 +75,8 @@
   
   <entry>
     <title>天气好热啊</title>
-    <link href="https://oo.oozry.com/08/summer.html"/>
-    <id>https://oo.oozry.com/08/summer.html</id>
+    <link href="https://oo.oozry.com/summer.html"/>
+    <id>https://oo.oozry.com/summer.html</id>
     <published>2017-08-03T13:08:47.414Z</published>
     <updated>2017-08-03T13:08:47.445Z</updated>
     
@@ -95,8 +95,8 @@
   
   <entry>
     <title>Migrate to Hexo</title>
-    <link href="https://oo.oozry.com/07/new-hexo-blog.html"/>
-    <id>https://oo.oozry.com/07/new-hexo-blog.html</id>
+    <link href="https://oo.oozry.com/new-hexo-blog.html"/>
+    <id>https://oo.oozry.com/new-hexo-blog.html</id>
     <published>2017-07-31T15:20:43.411Z</published>
     <updated>2018-04-30T07:55:04.196Z</updated>
     
@@ -111,8 +111,8 @@
   
   <entry>
     <title>make some rules</title>
-    <link href="https://oo.oozry.com/07/make-rule-for-life.html"/>
-    <id>https://oo.oozry.com/07/make-rule-for-life.html</id>
+    <link href="https://oo.oozry.com/make-rule-for-life.html"/>
+    <id>https://oo.oozry.com/make-rule-for-life.html</id>
     <published>2017-07-31T12:38:46.560Z</published>
     <updated>2017-08-01T15:39:34.686Z</updated>
     
@@ -129,8 +129,8 @@
   
   <entry>
     <title>those days</title>
-    <link href="https://oo.oozry.com/07/old-day.html"/>
-    <id>https://oo.oozry.com/07/old-day.html</id>
+    <link href="https://oo.oozry.com/old-day.html"/>
+    <id>https://oo.oozry.com/old-day.html</id>
     <published>2017-07-31T11:59:13.378Z</published>
     <updated>2018-04-30T07:48:56.100Z</updated>
     
@@ -147,8 +147,8 @@
   
   <entry>
     <title>Xposed for Android N</title>
-    <link href="https://oo.oozry.com/07/xposed-for-n.html"/>
-    <id>https://oo.oozry.com/07/xposed-for-n.html</id>
+    <link href="https://oo.oozry.com/xposed-for-n.html"/>
+    <id>https://oo.oozry.com/xposed-for-n.html</id>
     <published>2017-07-21T12:26:25.000Z</published>
     <updated>2017-08-10T03:46:54.903Z</updated>
     
