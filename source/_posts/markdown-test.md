@@ -104,6 +104,65 @@ void main()
     }
 
 **注意**:需要和普通段落之间存在空行。
+```python
+    #!/usr/bin/env python3
+    print("Hello, World!");
+```
+
+#!/usr/bin/env python3
+print("Hello, World!");
+
+此处有空行
+```
+    #include  <stdio.h>`
+    int main(void)`
+    {
+        printf("Hello world\n");
+    }
+```
+
+
+```ruby
+code block
+```
+
+```cpp
+fenced code block
+```
+
+```javascript
+function syntaxHighlight(code, lang) {
+   var foo = 'rhio';
+   var bar = 33;
+}
+```
+
+```def syntaxHighlight
+  @haroo = 'press'
+  return @haroo
+end
+```
+
+```
+<?php
+$a1=array("a"=>"red","b"=>"green","c"=>"blue");
+$a2=array("a"=>"red","c"=>"blue","d"=>"pink");
+
+$result=array_intersect_key($a1,$a2);
+print_r($result);
+?>
+```
+
+```java
+/* HelloWorld.java
+ */
+public class HelloWorld
+{
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+```
 
 #### 4.5 强调
 在强调内容两侧分别加上`*`或者`_`，如：
