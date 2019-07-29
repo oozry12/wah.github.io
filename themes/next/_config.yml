@@ -339,7 +339,7 @@ reward_settings:
   comment: 向大佬低头~
 
 reward:
-  wechatpay: /images/wechat.png
+  wechatpay: /img/wechat.png
   #alipay: /images/alipay.png
   #bitcoin: /images/bitcoin.png
 

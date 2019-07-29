@@ -21,14 +21,16 @@ $blue-bright  = #87daff
 $blue         = #0684bd
 $blue-deep    = #262a30
 $orange       = #fc6423
+$love-deep    = #f78feb
+$whole-black  = #000
 
 
 // Scaffolding
 // Settings for some of the most global styles.
 // --------------------------------------------------
 // Global text color on <body>
-$text-color                   = $black-light
-
+//$text-color                   = $black-light
+$text-color                   = $whole-black
 // Global link color.
 $link-color                   = $black-light
 $link-hover-color             = $black-deep
@@ -42,7 +44,7 @@ $border-color                 = $grey-light
 $body-bg-color                = white
 
 // Selection
-$selection-bg                 = $blue-deep
+$selection-bg                 = $love-deep
 $selection-color              = white
 
 
@@ -55,7 +57,8 @@ get_font_family(config) {
 }
 
 // Font families.
-$font-family-chinese      = "PingFang SC", "Microsoft YaHei"
+// $font-family-chinese      = "PingFang SC", "Microsoft YaHei"
+$font-family-chinese      = "Noto Serif SC"
 
 $font-family-base         = $font-family-chinese, sans-serif
 $font-family-base         = get_font_family('global'), $font-family-chinese, sans-serif if get_font_family('global')
