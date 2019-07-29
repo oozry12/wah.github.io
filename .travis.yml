@@ -20,7 +20,7 @@ cache:
 before_install:
   - npm cache clean -f
   - npm install -g hexo-cli
-
+  - npm install -f fsevents@1.2.9
 #安装git插件和搜索功能插件
 install:
   - npm install
