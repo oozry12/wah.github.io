@@ -22,7 +22,7 @@ before_install:
   - npm install -g hexo-cli
   - npm install -f fsevents@1.2.9
   - npm install hexo-deployer-git --save
-
+  - npm install hexo-generator-searchdb --save
 #安装git插件和搜索功能插件
 install:
   - npm install
