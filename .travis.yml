@@ -18,11 +18,12 @@ cache:
 
 #在构建之前安装hexo环境
 before_install:
+  - npm cache clean -f
   - npm install -g hexo-cli
 
 #安装git插件和搜索功能插件
 install:
-  - npm install
+  - npm install -f
 
   # 设置git提交名，邮箱；替换真实token到_config.yml文件
 before_script:
