@@ -1,5 +1,5 @@
 # 指定构建环境是Node.js，当前版本是稳定版
-anguage: node_js
+language: node_js
 node_js: stable
 
 env:
@@ -23,7 +23,7 @@ before_install:
 
 #安装git插件和搜索功能插件
 install:
-  - npm install -f
+  - npm install
 
   # 设置git提交名，邮箱；替换真实token到_config.yml文件
 before_script:
