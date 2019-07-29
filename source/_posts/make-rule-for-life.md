@@ -2,7 +2,6 @@
 title: make some rules
 tags:
 - lifes
-
 ---
 > For a better and healthy life,I have to make an effort to change my lifestyle .
 

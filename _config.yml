@@ -104,5 +104,6 @@ deploy:
   repository: git@myoozry:hexo.git
   branch: master
 - type: git
-  repository: git@github.com:oozry12/wah.github.io.git
+  ## repository: git@github.com:oozry12/wah.github.io.git
+  repo: https://github_token@github.com/oozry12/wah.github.io.git
   branch: master
