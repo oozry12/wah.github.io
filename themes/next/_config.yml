@@ -461,7 +461,7 @@ github_banner:
 font:
   # Use custom fonts families or not.
   # Depended options: `external` and `family`.
-  enable: true
+  enable: false
 
   # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
   host: https://fonts.proxy.ustclug.org
@@ -473,7 +473,7 @@ font:
 
   # Global font settings used for all elements inside <body>.
   global:
-    external: true
+    external: false
     family: EB Garamond
     size: 20
 
@@ -491,7 +491,7 @@ font:
 
   # Font settings for posts (.post-body).
   posts:
-    external: true
+    external: false
     family: Noto Serif SC
 
   # Font settings for <code> and code blocks.
