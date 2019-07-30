@@ -174,8 +174,8 @@ menu_settings:
 # Schemes
 #scheme: Muse
 #scheme: Mist
-#scheme: Pisces
-scheme: Gemini
+scheme: Pisces
+#scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -339,7 +339,7 @@ reward_settings:
   comment: 向大佬低头~
 
 reward:
-  wechatpay: /img/wechat.png
+  wechatpay: /img/wechat.jpg
   #alipay: /images/alipay.png
   #bitcoin: /images/bitcoin.png
 
@@ -423,7 +423,7 @@ safari_rainbow: false
 custom_scrollbar: false
 
 # Custom Logo (Do not support scheme Mist)
-custom_logo: /img/logo.png
+custom_logo: /img/logo.jpg
 
 codeblock:
   # Code Highlight theme
@@ -972,7 +972,7 @@ three:
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
 canvas_nest:
-  enable: true
+  enable: false
   onmobile: true # display on mobile or not
   color: "0,0,255" # RGB values, use `,` to separate
   opacity: 0.4 # the opacity of line: 0~1
