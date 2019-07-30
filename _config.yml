@@ -103,6 +103,3 @@ deploy:
   - type: git
     repo: https://github_token@github.com/oozry12/wah.github.io.git
     branch: master
- ##- type: git
- ##  repository: git@myoozry:hexo.git
- ##  branch: master
