@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.ico?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-material.min.css?v=1.0.2">
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","Pisces | Gemini":240,"display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: true,
+    mediumzoom: true,
+    lazyload: true,
+    pangu: true,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="据说最新xposed支持Android 7.x系统，大家一片欢呼，等得不要太久。简直饥渴啊。高兴是高兴，咱还要理性看待。但是，请大家注意慎重考虑，原因如下： 1、开发者并非xposed的原创rovo89大神，目前所有的项目都是基于abforce这位开发者 2、xposed框架功能非常强大，是系统层级的修改，代码质量与维护水平影响到整个手机系统的稳定性，可能随时崩溃 3、Android生态圈比较开放">
+<meta name="keywords" content="tech,xposed">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xposed for Android N">
+<meta property="og:url" content="https://o.oozry.com/xposed-for-n.html">
+<meta property="og:site_name" content="華💕敏">
+<meta property="og:description" content="据说最新xposed支持Android 7.x系统，大家一片欢呼，等得不要太久。简直饥渴啊。高兴是高兴，咱还要理性看待。但是，请大家注意慎重考虑，原因如下： 1、开发者并非xposed的原创rovo89大神，目前所有的项目都是基于abforce这位开发者 2、xposed框架功能非常强大，是系统层级的修改，代码质量与维护水平影响到整个手机系统的稳定性，可能随时崩溃 3、Android生态圈比较开放">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-02T12:31:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Xposed for Android N">
+<meta name="twitter:description" content="据说最新xposed支持Android 7.x系统，大家一片欢呼，等得不要太久。简直饥渴啊。高兴是高兴，咱还要理性看待。但是，请大家注意慎重考虑，原因如下： 1、开发者并非xposed的原创rovo89大神，目前所有的项目都是基于abforce这位开发者 2、xposed框架功能非常强大，是系统层级的修改，代码质量与维护水平影响到整个手机系统的稳定性，可能随时崩溃 3、Android生态圈比较开放">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://o.oozry.com/xposed-for-n">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  
+  <title>Xposed for Android N | 華💕敏</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">華💕敏</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">紛繁萬千 只想攜手一生</p>
+      
+    
+    
+      <a>
+        <img class="custom-logo-image" src="/img/logo.jpg" alt="華💕敏">
+      </a>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-books">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/books/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>书籍</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-movies">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/movies/" rel="section"><i class="menu-item-icon fa fa-fw fa-video-camera"></i> <br>电影</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://o.oozry.com/xposed-for-n.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wah & min">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="華💕敏">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Xposed for Android N
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-07-21 20:26:25" itemprop="dateCreated datePublished" datetime="2017-07-21T20:26:25+08:00">2017-07-21</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-05-02 20:31:05" itemprop="dateModified" datetime="2018-05-02T20:31:05+08:00">2018-05-02</time>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+                 阅读次数： 
+                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+            </span>
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>据说最新xposed支持Android 7.x系统，大家一片欢呼，等得不要太久。简直饥渴啊。高兴是高兴，咱还要理性看待。<br>但是，请大家注意慎重考虑，原因如下：</p>
+<p>1、开发者并非xposed的原创rovo89大神，目前所有的项目都是基于abforce这位开发者</p>
+<p>2、xposed框架功能非常强大，是系统层级的修改，代码质量与维护水平影响到整个手机系统的稳定性，可能随时崩溃</p>
+<p>3、Android生态圈比较开放自由，鱼龙混杂，在所谓的刷机包内可能嵌入恶意代码，恶意扣费推广之类</p>
+<p>4、原创作者早就完成这一步骤，但很快抛弃这一想法，正在提高框架稳定性。目前很多模块没更新，框架有了没模块用</p>
+<a id="more"></a>
+<p>———————————————————-（分割线 下面是这个项目的一些来龙去脉）——————————-</p>
+<blockquote>
+<p><strong>缘起</strong></p>
+</blockquote>
+<p>开发者abforce感觉很久没框架用，在github给rovo89大神发issues要他帮忙写开发文档，给包括他在内的有时间的开发者开发xposed_art_n。<br>而rovo89据说在搬家没太多空开发。开发者abforce之后直接嘲笑他，是不是玩其他小东西去了没时间了。<br>原话</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">What do you think? Do you have time for this or would prefer to still enjoy your life (and possibly playing with your puppies)?</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>再次邂逅</strong></p>
+</blockquote>
+<p>后面 ‘abforce’ 君强硬魔改了很多代码，再集成到系统内，然后要求 ‘rovo89’ 帮忙review代码，并且diff出不同项目的区别。<br>rovo89回应道：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The actual implementation is the smallest part of developing Xposed. Getting the knowledge about how the ART compiler and runtime works and finding ways to integrate Xposed with maximum compatiblity is the most time-consuming and complex part. Books could be written about the small, yet very important details that have to be considered. Sometimes when I understood how a particular implementation works and which tricks they&apos;re using, I indeed think I should write something up about it, but that would take me even more time (which I currently don&apos;t have).</span><br></pre></td></tr></table></figure>
+
+<p>（大概意思是新版本的ART机制很复杂，他正在研究破译内部技巧，而对于兼容性的探索是最耗时间也是最难的部分，他在记录一些，但不可能抽出大片空白时间写这么宏大的开发文档）</p>
+<blockquote>
+<p><strong>再度回应</strong>：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Congrats ;) Unfortunately, I can&apos;t review your changes, it&apos;s just too much and I don&apos;t remember all those details where I deviated from simply porting the Marshmallow changes and which additional changes were required to make it reliable (i.e. to ensure that the hooks are called even with compiler optimizations).</span><br><span class="line"></span><br><span class="line">As you already mentioned, your changes could only work for ROMs compiled from scratch with Xposed already active, so people should understand that this won&apos;t work (at least not reliably) on their stock or otherwise pre-compiled ROMs.</span><br></pre></td></tr></table></figure>
+
+<p>（大概意思是 恭喜，呵呵。我不可能能短时间内review你的修改部分，很难回忆起来大量的仅仅只是从M版本移植到N版本细节，这些修改能否保证在编译器优化后仍然能正常使用仍然是不确定的。正如你提到的，你利用集成入系统的框架，那么就算用户理解为用处不大，或者说不靠谱。因为太多用户还在官方系统而不是预编译好的ROM）</p>
+<blockquote>
+<p><strong>再次交锋</strong></p>
+</blockquote>
+<p>abforce君再次感谢大神的回复。在发现很多的崩溃和不正常运行的问题后，再次要求rovo89君review代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">But there&apos;s a problem when GC runs, specifically I suspect that heap or stack will be malformed when XPrivacy is enabled.</span><br><span class="line"></span><br><span class="line">As I traced down the error, the problem seems to be related to visiting roots when GC marks objects. Moving form M to N, just one of your commits I couldn&apos;t port directly, that of ArtMethod::VisitRoots.</span><br><span class="line"></span><br><span class="line">Also enabling hook resources causes the problem when GC runs, are you sure your modified Object.Clone() doesn&apos;t cause memory issues?</span><br></pre></td></tr></table></figure>
+
+<p>（大概意思是有些模块如XPrivacy 报错，他搞不懂一些问题）</p>
+<blockquote>
+<p><strong>高潮</strong></p>
+</blockquote>
+<p>开源手机界瞬间炸开了锅。很多开发者简单地利用abforce君的简单教程，集成编译了很多roms，但全部都是基于他的代码，大部分也可以开机，并且有些模块看似正常运行。</p>
+<blockquote>
+<p><strong>再次澄清表态</strong></p>
+</blockquote>
+<p>今天5小时前</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Surprisingly by porting M changes to N everything works well,</span><br><span class="line">From my experience, I can tell you that it&apos;s indeed not that hard to get the basics done, but it takes a hell lot of time for the details. It&apos;s like the 80-20 rule, except that it&apos;s more like 95-5 or so.</span><br><span class="line"></span><br><span class="line">The hooking approach I have designed for the previous releases is rather stable and can be applied for newer releases as well. I assume you needed most of the time to check all the places where IsProxyMethod() and IsDirect() is called and decide whether they should consider the new method modifier or not (i.e. use parameter true or not). If you didn&apos;t do that, you might have missed some places where they have newly introduced such calls. Same for methods like InstallStubsForMethod(), which needs to operate on the original original method even when they&apos;re called for a hooked method. You&apos;d need to check for more places where this could be relevant. That&apos;s still in the range of days, but if you miss to do it, you might see obscure crashes or misbehavior that are very hard to debug.</span><br><span class="line"></span><br><span class="line">Besides that, you took an approach where hooks would only work properly for ROMs which are entirely compiled from scratch. On stock ROMs and even most custom ROMs (that didn&apos;t include your port while building) as well as for any apps the device might have compiled before. So you&apos;d have to start all over again with a wiped device running a special ROM. If not, then optimizations (e.g. inlining) might prevent a method from being called at all, and hence hooks wouldn&apos;t work. The worst thing about this is that the exact behavior would depend on the ROM, or even how the user uses the device (now that apps are compiled based on profiles). Modules would fail randomly and the module developers would be wondering what they did wrong (answer: nothing). If not all of the prerequisites are fulfilled, it&apos;s a pretty unreliable API. Imagine Google published an update where the OnClickListener of a button wasn&apos;t called sometimes, unless you compiled your ROM from scratch... For me personally, this is a big limitation.</span><br><span class="line"></span><br><span class="line">There is a flashable xposed for N available here:</span><br><span class="line">https://forum.xda-developers.com/xposed/unofficial-xposed-v87-unofficial-yes-im-t3639192</span><br><span class="line">It seems like it&apos;s for AOSP ROMs</span><br><span class="line">Their code is @abforce&apos;s port, with all the limitations I listed above. :roll_eyes: It doesn&apos;t make sense at all to publish flashable ZIPs with this, as the port is only intended for recompiling a ROM from scratch.</span><br><span class="line">And as I feared, there is not a single warning that this is an incomplete port that will often fail to fulfill the API contract. :angry: That&apos;s bad for developers and users, they should at least know it&apos;s incomplete so they can decide whether they want to support/use it. I would never dare to do something like that without a big fat warning. Actually, as I&apos;m rather perfectionist, I wouldn&apos;t publish an incomplete version at all, reliablity is very important for me.</span><br><span class="line"></span><br><span class="line">I just checked my Git log and I had the basic hooking (as in this port) ready in October. Since then, I have worked on removing the limitations. To make it more reliable on pre-compiled ROMs, I could have ported the recompiling part as well, however that&apos;s still not ideal. As explained somewhere above, we have JIT now, which allows us to keep all the optimizations, only invalidating (and possibly recompiling) the methods which are directly affected by hooking. This is quite challenging, as it&apos;s more than just copy &amp; paste. And until this isn&apos;t done, I won&apos;t publish anything. 9 months for that (until now) is really a long time, I know, but hey, it&apos;s my spare time and e.g. due to moving to a new apartment, I couldn&apos;t work on Xposed for several months (!) at all, and had only very limited time otherwise.</span><br><span class="line"></span><br><span class="line">As I traced down the error, the problem seems to be related to visiting roots when GC marks objects.</span><br><span class="line">Also enabling hook resources causes the problem when GC runs, are you sure your modified Object.Clone() doesn&apos;t cause memory issues?</span><br><span class="line">I just commented on your diff. There&apos;s no real difference in my code for these two methods, so you&apos;ll have to debug it yourself. I know this can be hard, as the real culprit can sometimes be in a totally different place. Even if it ends up to be a single character that needs to be changed, you can easily spend dozens of hours on debugging one issue. That said - if you&apos;re seriously interested in contributing, this might be a good challenge. :wink:</span><br></pre></td></tr></table></figure>
+
+<p>（大概意思是基础部分，移植过去不难，但是正如著名的二八定律，后面更耗时间更困难。我之前的代码设计都可以沿用到新版本，如果只关注局部，后期你将很难debug排查整个项目的bug。基于必须集成入ROM，如果遇到奇怪的设备或者系统，你将要从头编译排查。因为这种不兼容性，很多模块会随机性地出错。对于完美主义者的我，我绝对不会发布任何没完成的有巨大风险的项目代码，可靠性是我的第一标准。回顾我的代码提交记录，早在去年10月我都完成这部分工作，自从那以后，我一直致力于研究可靠性与兼容性。在我个人时间里，我搬家花费了不少，但我还是投入开发研究。我已经检查了你的修改，并没有太多的新的东西，所以你需要自己排查。最后祝你迎接挑战，好好加油）</p>
+<blockquote>
+<p><strong>最后忠告</strong></p>
+</blockquote>
+<p>rovo89说道：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">And just to add to my reply above: Imagine I published my current WIP now. I bet that some people would publish it as their build, without any warnings that it&apos;s incomplete and not intended to be used productively.</span><br></pre></td></tr></table></figure>
+
+<p>（大概意思是希望大家附上我的忠告，这些不完整的修改不应该用在生产环境）</p>
+<p>以上原文全部在github中。酷安，和微博也有 各路大神（包括吴大）的看法与说明。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">github.com/rovo89/Xposed/issues/230</span><br><span class="line">abforce的代码项目 github.com/abforce/xposed_art_n</span><br></pre></td></tr></table></figure>
+
+<p>全程手打。理性分析。大神轻轻拍。</p>
+<p><img alt="1" data-src="http://static.oneplus.cn/data/attachment/forum/201707/20/204103fr0v07a3sx08et74.png.w_768.png"><br><img alt="2" data-src="http://static.oneplus.cn/data/attachment/forum/201707/20/204103v0htzvhxughxvthh.png.w_768.png"></p>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>向大佬低头~</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/img/wechat.jpg" alt="wah & min 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/tech/" rel="tag"><i class="fa fa-tag"></i> tech</a>
+          
+            <a href="/tags/xposed/" rel="tag"><i class="fa fa-tag"></i> xposed</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/music-fruit.html" rel="prev" title="温柔而坚定的声音">
+                温柔而坚定的声音 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+  
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTY0OC8yMjE1OQ=="></div>
+  </div>
+  
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+  <p class="site-author-name" itemprop="name">wah & min</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+
+
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+        
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+
+
+
+  <div class="links-of-author motion-element">
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://weibo.com/id110" title="Weibo &rarr; https://weibo.com/id110" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+    
+  </div>
+
+
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2012 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wah & min</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
+
+  
+  <script src="/lib/mediumzoom/medium-zoom.min.js"></script>
+
+  
+  <script src="/lib/lazyload/lozad.min.js?v=1.10.0"></script>
+
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=4.0.7"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+  <script src="/js/js.cookie.js?v=7.2.0"></script>
+  <script src="/js/scroll-cookie.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// GET RESPONSIVE HEIGHT PASSED FROM IFRAME
+
+window.addEventListener("message", function(e) {
+  var data = e.data;
+  if ((typeof data === 'string') && (data.indexOf('ciu_embed') > -1)) {
+    var featureID = data.split(':')[1];
+    var height = data.split(':')[2];
+    $(`iframe[data-feature=${featureID}]`).height(parseInt(height) + 30);
+  }
+}, false);
+</script>
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+<script>
+  window.livereOptions = {
+    refer: 'xposed-for-n.html'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+  
+
+</body>
+</html>
