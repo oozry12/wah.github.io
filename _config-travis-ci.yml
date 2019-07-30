@@ -7,7 +7,7 @@ title: 華💕敏
 subtitle: 紛繁萬千 只想攜手一生
 description: 
 author: wah & min
-language: zh-CN
+language: zh-TW
 timezone:
 
 favicon: /img/favicon.ico
@@ -60,7 +60,7 @@ highlight:
 index_generator:
   path: ''
   per_page: 5
-  order_by: -updated
+  order_by: -date
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -103,6 +103,6 @@ deploy:
   type: git
   repo: https://github_token@github.com/oozry12/wah.github.io.git
   branch: master
- ##- type: git
- ##  repository: git@myoozry:hexo.git
- ##  branch: master
+## - type: git
+##   repository: git@myoozry:hexo.git
+##   branch: master
